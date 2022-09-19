@@ -1,0 +1,1185 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Калькулятор</title>
+</head>
+<body>
+  
+<div class="conteiner"> 
+    <div class="content">
+
+    <!-- Заголовок и описание -->
+
+        <div class="header-container">
+    <h1 class="header-name">Калькулятор расчета блока</h1>
+    <h6 class="header-info">Раньше дома и здания строили, особо не задумываясь о теплопроводности. Поэтому делали стены
+        дома толстыми до 1,5 метров, чтобы в доме было тепло и комфортно даже в сильный мороз и прохладно в жаркую
+        погоду. Сейчас делать стены такими толстыми экономически нецелесообразно. В настоящее время существуют
+        материалы, которые могут обеспечить высокие показатели тепловой защиты при меньшей толщине стены, но при таких
+        же прочностных характеристиках.
+        Этот калькулятор поможет выбрать вам нужную вам толщину стен дома в зависимости от вашего региона и от вида
+        материала, который вы собираетесь использовать для несущих стен.
+    </h6>
+    <h6><br><span class="color-text">Этот калькулятор</span> поможет выбрать вам нужную вам толщину стен дома в
+        зависимости от вашего региона и от вида материала, который вы собираетесь использовать для несущих стен.<br>
+    </h6>
+        </div>
+    <!-- Навигация -->
+
+        <div class="navigator">
+            <ul>
+                <li id="n1" onclick="cont1();progDelete()" class="nav active">1</li>
+                <li id="n2" onclick="cont2()" class="nav">2</li>
+                <li id="n3" onclick="cont3()" class="nav">3</li>
+                <li id="n4" onclick="cont4();tabl();prog()" class="nav">4</li>
+                
+            </ul>  
+
+
+        </div>
+
+     <div class="navigatorContent">
+
+     <div class="calkulator1">       
+         <div class="name-calc">
+               <img src="../Калькулятор/images/1.png" alt="">
+               <span>Наружние несущие стены</span>
+         </div>
+
+    <!-- Калькулятор по разделам -->
+    <!-- 1 Параметры блока-->
+         <div class="container-calc">
+        <div class="parametr-bloc">
+            <div class="name-bloc">
+                <img src="images/brick.png" alt=""> <span class="brick">ВЫБЕРИТЕ ПАРАМЕТРЫ БЛОКА</span>
+            </div>
+            <div class="one-calc">
+                <div class="calc3">
+                    <td>Размер блока</td>
+                    <br>
+                    <td>
+                        <select id="numberBlock" name="months" class="S-block task">
+                            <option class="dataB" data-block="0.033" data-massa="11" data-poddon = "54"  value="Блок №1 (188*300*588)">Блок №1 Стандартный (для утепления) (188*300*588)</option>
+                            <option class="dataB" data-block="0.067" data-massa="29" data-poddon = "24" value="Блок №2 (388*300*588)">Блок №2 Энергоэффективный (388*300*588)</option>
+                            <option class="dataB" data-block="0.05" data-massa="18"  data-poddon = "36"  value="Блок №3 (285*300*588)">Блок №3 Комфорт (285*300*588)</option>
+                            <option class="dataB" data-block="0.028" data-massa="13" data-poddon = "56"  value="Блок №4 (250*188*588)">Блок №4 Комфорт (с кирпичом) (250*188*588)</option>
+                            <option class="dataB" data-block="0.041" data-massa="18" data-poddon = "42"  value="Блок №5 (235*300*588)">Блок №5 Комфорт + (с кирпичом) (235*300*588)</option>
+                            <option class="dataB" data-block="0.033" data-massa="15" data-poddon = "54"  value="Блок №6 (188*300*588)">Блок №6 Комфорт (с утеплением) (188*300*588)</option>
+                            <option class="dataB" data-block="0.016" data-massa="5"  data-poddon = "108"  value="Блок №7 (588*300*588)">Блок №7 Блок для утепления (92*300*588)</option>
+                        </select>
+                </div>
+                <div class="calc3 bl">
+                            <td>Марка блока</td>
+                            <br>
+                            <td>
+                                <select class="D-block task" name="months">
+                                    <option value="D300">D300</option>
+                                    <option value="D400">D400 </option>
+                                    <option value="D500">D500</option>
+                                    <option value="D600">D600</option>
+
+                                </select>
+                            </td>
+                    </td>
+                </div> 
+            </div>
+    
+    
+    
+            <div class="one-calc">
+                <div class="size-bloc">
+                    Расположение блока
+                    <br>
+                    <td>Вертикально</td>
+                    <input text="" type="checkbox">
+                    <td>Горизонтально</td>
+                    <input text="" type="checkbox">
+                </div>
+            </div>
+    
+            <div class="one-calc">
+                <div class="size-bloc">
+                    Запас на обрезки(%)<br>
+    
+                    <div>
+                        <form name="publish">
+                            <input  class="task" id="a" type="text" ">
+    
+                              </div>
+        
+                        </div>
+                       </div>                 
+                       
+               </div>
+    
+    
+    
+    
+    
+    
+                    <div class="images-bloc"><img
+                            src="../Калькулятор/images/betonnyj-blok_polistirolbeton-prochnyj-blok-dlya-nesushchih-sten_blok-380x300x588_armidablok.png"
+                            alt=""></div>
+         </div>
+    
+    <!-- 2 Размеры стен-->
+        
+        <div class="container-calc">
+        <div class="parametr-bloc">
+                            <div class="name-bloc">
+                                <img src="images/brick.png" alt=""> <span class="brick">ВЫБЕРИТЕ ПАРАМЕТРЫ БЛОКА</span>
+                            </div>
+        
+        
+            <div class="dom">
+        
+                <div class="dom-size">1 этаж</div>
+                    <div class="two-calc">                   
+                        <div class="size-parametr">
+                            Общая длина стен(м)<br>
+                            <input class="task" id="b"  type="text">
+                        </div>
+        
+                        <div class="size-parametr">
+                            Высота этажа(м)<br>
+                            <input class="task" id="c" type="text">
+                        </div>
+        
+                        <div class="size-parametr">
+                            Подогнать по высоте блока<br>
+                            <input class="task" id="chek1"  value="0.3" text="" type="checkbox">
+                        </div>
+                    </div>
+        
+                <div class="dom-size">2 этаж </div>
+                    <div class="two-calc">
+                        <div class="size-parametr">
+                            Общая длина стен(м)<br>
+                            <input class="task" id="d" type="text">
+                        </div>
+        
+                        <div class="size-parametr">
+                            Высота этажа(м)<br>
+                            <input class="task" id="i" type="text">
+                        </div>
+        
+                        <div class="size-parametr">
+                            Подогнать по высоте блока<br>
+                            <input class="task" id="chek2"  value="0.3" text="" type="checkbox">
+        
+                        </div>
+                    </div>
+        
+                <div class="dom-size">3 этаж</div>
+                    <div class="two-calc">
+                        <div class="size-parametr">
+                            Общая длина стен(м)<br>
+                            <input class="task" id="f" type="text">
+                        </div>
+        
+                        <div class="size-parametr">
+                            Высота этажа(м)<br>
+                            <input class="task" id="g" type="text">
+                        </div>
+        
+                        <div class="size-parametr">
+                            Подогнать по высоте блока<br>
+                            <input  class="task" id="chek3"  value="0.3" text="" type="checkbox">
+                        </div>
+                    </div>
+            </div>  <!-- class="dom" -->
+        </div>  <!--class="parametr-bloc" --> 
+        <div class="images-bloc"><img src="../Калькулятор/images/6.png" alt=""></div>
+
+        </div>  <!-- class="container-calc" -->
+
+    
+    <!-- 3 Укажите размеры Проемов-->
+
+        <div class="container-calc">
+            <div class="parametr-bloc">
+                <div class="name-bloc">
+                    <img src="images/window.png" alt=""> <span class="brick">ВЫБЕРИТЕ РАЗМЕРЫ
+                            ПРОЕМОВ(ОКОННЫХ/ДВЕРНЫХ)</span>
+                 </div>
+                <div class="dom">
+                    <div class="two-calc">
+                        <div class="two-calc-input">
+
+                   
+                        <div class="size-parametr">
+                            <td>Высота(м)</td><br>
+                                <input class="task" id="proemH"  type="text">
+                            </div>
+                        <div class="size-parametr">
+                            <td>Ширина(м)</td><br>
+                                <input class="task" id="proemL" type="text">
+                        </div>
+                        <div class="size-parametr">
+                            <td>Колличество</td><br>
+                                <input  class="task" id="proemSize" type="text">
+                        </div>
+                            <div class="size-parametr"><br>
+                                <div>
+                                    <button onclick="getProem()" type="button">+</button>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                       
+                    <div class="size-parametr">
+                                <ol id="taskList"> </ol>
+                        </div>
+                </div>
+            </div>
+            <div class="images-bloc"><img src="../Калькулятор/images/4.png" alt=""></div>
+
+        </div>
+
+    <!-- 4 Укажите размеры Фронтов-->
+
+        <div class="container-calc">
+            <div class="parametr-bloc">
+                <div class="name-bloc">
+                    <img src="images/joist.png" alt=""> <span class="brick">УКАЖИТЕ РАЗМЕРЫ ФРОНТОВ</span>
+                </div>
+
+
+                <div class="dom">
+
+                    <div class="dom-size"><div class="context1">Фронт 1</div></div>
+                    <div class="two-calc">
+                        <div class="size-parametr">
+                            Ширина(м)<br>
+                            <input class="task" id="frontA" type="text">
+                        </div>
+
+                        <div class="size-parametr">
+                            Высота (м)<br>
+                            <input class="task" id="frontB" type="text">
+                        </div>
+
+                        <div class="size-parametr">
+                            Колличество(шт)<br>
+                            <input class="task" id="frontSizeB" type="text">
+                        </div>
+                    </div>
+  
+                    <div class="dom-size"><div class="context2">Фронт 2</div></div>
+                    <div class="two-calc">
+                        <div class="size-parametr">
+                            Ширина (м)<br>
+                            <input class="task" id="frontC" type="text">
+                        </div>
+
+                        <div class="size-parametr">
+                            Высота(м)<br>
+                            <input class="task" id="frontD" type="text">
+                        </div>
+
+                        <div class="size-parametr">
+                            Колличество(шт)<br>
+                            <input class="task" id="frontSizeC" type="text">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="images-bloc"><img src="../Калькулятор/images/123.png" alt=""></div>
+        </div>
+
+    <!-- 5 Укажите размеры трапецивидных окон-->
+
+        <div class="container-calc">
+                <div class="parametr-bloc">
+                    <div class="name-bloc">
+                        <img src="images/windows 2.png" alt=""> 
+                           <span class="brick">ВЫБЕРИТЕ РАЗМЕРЫ ТРАПЕЦЕВИДНЫХ ОКОНН</span>
+                        </div>
+
+
+                        <div class="dom">
+                            <div class="two-calc">
+                                <div class="two-calc-input">
+        
+                           
+                                <div class="size-parametr">
+                                    <td>Высота max(м)</td><br>
+                                        <input class="task" id="trapH"  type="text">
+                                    </div>
+                                <div class="size-parametr">
+                                    <td>Высота min(м)</td><br>
+                                        <input class="task" id="trapH2"  type="text">
+                                </div>
+                                <div class="size-parametr">
+                                    <td>Ширина(м)</td><br>
+                                        <input class="task" id="trapL" type="text">
+                                </div>
+                                <div class="size-parametr">
+                                    <td>Колличество</td><br>
+                                        <input  class="task" id="trapSize" type="text">
+                                </div>
+                                    <div class="size-parametr"><br>
+                                        <div>
+                                            <button onclick="getTrap()" type="button">+</button>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                               
+                            <div class="size-parametr">
+                                        <ol id="taskListTrap"> </ol>
+                                </div>
+                        </div>
+
+
+
+                </div>
+            <div class="images-bloc"><img src="../Калькулятор/images/1dom.png" alt=""></div>
+        </div>
+
+     <!-- 6 Укажите размеры круглых окон-->
+
+        <div class="container-calc">
+        <div class="parametr-bloc">
+            <div class="name-bloc">
+                <img src="images/windows 3.png" alt=""> <span class="brick">УКАЖИТЕ РАЗМЕРЫ КРУГЛЫХ ОКОН</span>
+            </div>
+
+
+            <div class="dom">
+                <div class="two-calc">
+                    <div class="two-calc-input">
+
+               
+                    <div class="size-parametr">
+                        <td>Высота max(м)</td><br>
+                            <input class="task" id="circleH"  type="text">
+                        </div>
+                
+                    <div class="size-parametr">
+                        <td>Ширина(м)</td><br>
+                            <input class="task" id="circleL" type="text">
+                    </div>
+                    <div class="size-parametr">
+                        <td>Колличество</td><br>
+                            <input  class="task" id="circleSize" type="text">
+                    </div>
+                        <div class="size-parametr"><br>
+                            <div>
+                                <button onclick="getCircle()" type="button">+</button>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                   
+                <div class="size-parametr">
+                            <ol id="taskListCircle"> </ol>
+                    </div>
+            </div>
+
+        </div>
+
+
+        <div class="images-bloc"><img src="../Калькулятор/images/5.png" alt=""></div>
+        </div>
+
+    <!-- 7 Клей -->
+    <div class="container-calc">
+        <div class="parametr-bloc">
+            <div class="name-bloc">
+                <img src="images/sack.png" alt=""> <span class="brick">КЛЕЙ</span>
+            </div>
+
+            <div class="proem">
+                <div class="size-bloc">
+                    Добавить к рассчету клей для кладки блока
+                    <br>
+                    <td>Добавить</td>
+                    <input id="" text="" type="checkbox">
+                </div>
+            </div>
+        </div>
+        <div class="clei"><img src="../Калькулятор/images/клей_.png" alt=""></div>
+    </div>
+
+    <!-- 8 Пена -->
+
+    <div class="container-calc">
+        <div class="parametr-bloc">
+            <div class="name-bloc">
+                <img src="images/Слой 3 копия 3.png" alt=""> <span class="brick">ПЕНА</span>
+            </div>
+
+            <div class="proem">
+                <div class="size-bloc">
+                    Добавить к рассчету пену для кладки блока
+                    <br>
+                    <td>Добавить</td>
+                    <input text="" type="checkbox">
+                </div>
+            </div>
+
+        </div>
+           <div class="pena"><img src="../Калькулятор/images/пена клей.png" alt=""></div>
+    </div>
+    <!-- 9 Кладочная сетка -->
+
+        <div class="container-calc">
+                    <div class="parametr-bloc">
+                        <div class="name-bloc">
+                            <img src="images/grid.png" alt=""> <span class="brick">КЛАДОЧНАЯ СЕТКА</span>
+                        </div>
+    
+                        <div class="proem">
+                            <div class="size-bloc">
+                                Добавить к рассчету кладочную сетку
+                                <br>
+                                <td>Добавить</td>
+                                <input text="" type="checkbox">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="images-bloc"><img src="../Калькулятор/images/сетка на блоке.png" alt=""></div>
+        </div>
+
+
+
+    
+
+     </div>
+
+     <div class="calkulator2">
+            <div class="name-calc">
+                <img src="../Калькулятор/images/1.png" alt=""><span>Внутренние несущие стены</span>
+                    </div>
+            
+                <!-- Калькулятор по разделам -->
+                <!-- 1 Параметры блока-->
+                <div class="container-calc">
+                    <div class="parametr-bloc">
+                        <div class="name-bloc">
+                            <img src="images/brick.png" alt=""> <span class="brick">ВЫБЕРИТЕ ПАРАМЕТРЫ БЛОКА</span>
+                        </div>
+                
+                        <div class="one-calc">
+                            <div class="calc3">
+                                <td>Размер блока</td>
+                                <br>
+                                <td>
+                                    <select  name="months" class="S-block task">
+                                        <option class="dataB" data-block="0.033" value="Блок №1 (188*300*588)">Блок №1 Самонесущий (для утепления) (188*300*588)</option>
+                                        <option class="dataB" data-block="0.033" value="Блок №2 (188*300*588)">Блок №2 Самонесущий (188*300*588)</option>
+                                        <option class="dataB" data-block="0.033" value="Блок №3 (188*300*588)">Блок №3 Несущий (188*300*588)</option>
+                                        <option class="dataB" data-block="0.033" value="Блок №4 (188*300*588)">Блок №4 Несущий (для утепления) (188*300*588)</option>
+                                        <option class="dataB" data-block="0.066" value="Блок №5 (380*300*588)">Блок №5 Самонесущий (380*300*588)</option>
+                                        <option class="dataB" data-block="0.083" value="Блок №6 (488*300*588)">Блок №6 Самонесущий (488*300*588)</option>
+                                        <option class="dataB" data-block="0.1"   value="Блок №7 (588*300*588)">Блок №7 Самонесущий (588*300*588)</option>
+                                    </select>
+                            </div>
+                            <div class="calc3 bl">
+                                        <td>Марка блока</td>
+                                        <br>
+                                        <td>
+                                            <select class="D-block task" name="months">
+                                                <option value="D300">D300</option>
+                                                <option value="D400">D400 </option>
+                                                <option value="D500">D500</option>
+                                                <option value="D600">D600</option>
+            
+                                            </select>
+                                        </td>
+                                </td>
+                            </div> 
+                        </div>
+                
+                
+                
+                        <div class="one-calc">
+                            <div class="size-bloc">
+                                Расположение блока
+                                <br>
+                                <td>Вертикально</td>
+                                <input text="" type="checkbox">
+                                <td>Горизонтально</td>
+                                <input text="" type="checkbox">
+                            </div>
+                        </div>
+                
+                        <div class="one-calc">
+                            <div class="size-bloc">
+                                Запас на обрезки(%)<br>
+                
+                                <div>
+                                    <form name="publish">
+                                        <input  class="task" id="a" type="text" ">
+                
+                                          </div>
+                    
+                                    </div>
+                                   </div>                 
+                                   
+                           </div>
+                
+                
+                           
+                           
+                  
+                
+                
+                
+                
+                
+                                <div class="images-bloc"><img
+                                        src="../Калькулятор/images/betonnyj-blok_polistirolbeton-prochnyj-blok-dlya-nesushchih-sten_blok-380x300x588_armidablok.png"
+                                        alt=""></div>
+                     </div>
+                
+                <!-- 2 Размеры стен-->
+                    
+                <div class="container-calc">
+                    <div class="parametr-bloc">
+                                        <div class="name-bloc">
+                                            <img src="images/brick.png" alt=""> <span class="brick">ВЫБЕРИТЕ ПАРАМЕТРЫ БЛОКА</span>
+                                        </div>
+                    
+                    
+                        <div class="dom">
+                    
+                            <div class="dom-size">1 этаж</div>
+                                <div class="two-calc">                   
+                                    <div class="size-parametr">
+                                        Общая длина стен(м)<br>
+                                        <input class="task" id="b"  type="text">
+                                    </div>
+                    
+                                    <div class="size-parametr">
+                                        Высота этажа(м)<br>
+                                        <input class="task" id="c" type="text">
+                                    </div>
+                    
+                                    <div class="size-parametr">
+                                        Подогнать по высоте блока<br>
+                                        <input class="task" id="chek1"  value="0.3" text="" type="checkbox">
+                                    </div>
+                                </div>
+                    
+                            <div class="dom-size">2 этаж </div>
+                                <div class="two-calc">
+                                    <div class="size-parametr">
+                                        Общая длина стен(м)<br>
+                                        <input class="task" id="d" type="text">
+                                    </div>
+                    
+                                    <div class="size-parametr">
+                                        Высота этажа(м)<br>
+                                        <input class="task" id="i" type="text">
+                                    </div>
+                    
+                                    <div class="size-parametr">
+                                        Подогнать по высоте блока<br>
+                                        <input class="task" id="chek2"  value="0.3" text="" type="checkbox">
+                    
+                                    </div>
+                                </div>
+                    
+                            <div class="dom-size">3 этаж</div>
+                                <div class="two-calc">
+                                    <div class="size-parametr">
+                                        Общая длина стен(м)<br>
+                                        <input class="task" id="f" type="text">
+                                    </div>
+                    
+                                    <div class="size-parametr">
+                                        Высота этажа(м)<br>
+                                        <input class="task" id="g" type="text">
+                                    </div>
+                    
+                                    <div class="size-parametr">
+                                        Подогнать по высоте блока<br>
+                                        <input  class="task" id="chek3"  value="0.3" text="" type="checkbox">
+                                    </div>
+                                </div>
+                        </div>  <!-- class="dom" -->
+                    </div>  <!--class="parametr-bloc" --> 
+                    <div class="images-bloc"><img src="../Калькулятор/images/6.png" alt=""></div>
+            
+                </div>  <!-- class="container-calc" -->
+            
+                
+                
+                
+                
+                    <!-- 3 Укажите размеры Проемов-->
+            
+                    <div class="container-calc">
+                        <div class="parametr-bloc">
+                            <div class="name-bloc">
+                                <img src="images/window.png" alt=""> <span class="brick">ВЫБЕРИТЕ РАЗМЕРЫ
+                                        ПРОЕМОВ(ОКОННЫХ/ДВЕРНЫХ)</span>
+                             </div>
+                            <div class="dom">
+                                <div class="two-calc">
+                                    <div class="two-calc-input">
+            
+                               
+                                    <div class="size-parametr">
+                                        <td>Высота(м)</td><br>
+                                            <input class="task" id="proemH"  type="text">
+                                        </div>
+                                    <div class="size-parametr">
+                                        <td>Ширина(м)</td><br>
+                                            <input class="task" id="proemL" type="text">
+                                    </div>
+                                    <div class="size-parametr">
+                                        <td>Колличество</td><br>
+                                            <input  class="task" id="proemSize" type="text">
+                                    </div>
+                                        <div class="size-parametr"><br>
+                                            <div>
+                                                <button onclick="getProem()" type="button">+</button>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </div>
+                                   
+                                <div class="size-parametr">
+                                            <ol id="taskList"> </ol>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="images-bloc"><img src="../Калькулятор/images/4.png" alt=""></div>
+            
+                    </div>
+            
+    
+        
+                <!-- 7 Клей -->
+                <div class="container-calc">
+                    <div class="parametr-bloc">
+                        <div class="name-bloc">
+                            <img src="images/sack.png" alt=""> <span class="brick">КЛЕЙ</span>
+                        </div>
+            
+                        <div class="proem">
+                            <div class="size-bloc">
+                                Добавить к рассчету клей для кладки блока
+                                <br>
+                                <td>Добавить</td>
+                                <input text="" type="checkbox">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clei"><img src="../Калькулятор/images/клей_.png" alt=""></div>
+                </div>
+            
+                <!-- 8 Пена -->
+            
+                <div class="container-calc">
+                    <div class="parametr-bloc">
+                        <div class="name-bloc">
+                            <img src="images/Слой 3 копия 3.png" alt=""> <span class="brick">ПЕНА</span>
+                        </div>
+            
+                        <div class="proem">
+                            <div class="size-bloc">
+                                Добавить к рассчету пену для кладки блока
+                                <br>
+                                <td>Добавить</td>
+                                <input text="" type="checkbox">
+                            </div>
+                        </div>
+            
+                    </div>
+                       <div class="pena"><img src="../Калькулятор/images/пена клей.png" alt=""></div>
+                </div>
+                <!-- 9 Кладочная сетка -->
+            
+                    <div class="container-calc">
+                                <div class="parametr-bloc">
+                                    <div class="name-bloc">
+                                        <img src="images/grid.png" alt=""> <span class="brick">КЛАДОЧНАЯ СЕТКА</span>
+                                    </div>
+                
+                                    <div class="proem">
+                                        <div class="size-bloc">
+                                            Добавить к рассчету кладочную сетку
+                                            <br>
+                                            <td>Добавить</td>
+                                            <input text="" type="checkbox">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="images-bloc"><img src="../Калькулятор/images/сетка на блоке.png" alt=""></div>
+                    </div>
+            
+     </div>
+
+     <div class="calkulator3">
+        <div class="name-calc">
+            <img src="../Калькулятор/images/1.png" alt=""><span>Внутренние перегородки</span>
+                </div>
+        
+            <!-- Калькулятор по разделам -->
+            <!-- 1 Параметры блока-->
+            <div class="container-calc">
+                <div class="parametr-bloc">
+                    <div class="name-bloc">
+                        <img src="images/brick.png" alt=""> <span class="brick">ВЫБЕРИТЕ ПАРАМЕТРЫ БЛОКА</span>
+                    </div>
+            
+                    <div class="one-calc">
+                        <div class="calc3">
+                            <td>Размер блока</td>
+                            <br>
+                            <td>
+                                <select  name="months" class="S-block task">
+                                    <option class="dataB" data-block="0.033" value="Блок №1 (188*300*588)">Блок №1 Самонесущий (для утепления) (188*300*588)</option>
+                                    <option class="dataB" data-block="0.033" value="Блок №2 (188*300*588)">Блок №2 Самонесущий (188*300*588)</option>
+                                    <option class="dataB" data-block="0.033" value="Блок №3 (188*300*588)">Блок №3 Несущий (188*300*588)</option>
+                                    <option class="dataB" data-block="0.033" value="Блок №4 (188*300*588)">Блок №4 Несущий (для утепления) (188*300*588)</option>
+                                    <option class="dataB" data-block="0.066" value="Блок №5 (380*300*588)">Блок №5 Самонесущий (380*300*588)</option>
+                                    <option class="dataB" data-block="0.083" value="Блок №6 (488*300*588)">Блок №6 Самонесущий (488*300*588)</option>
+                                    <option class="dataB" data-block="0.1"   value="Блок №7 (588*300*588)">Блок №7 Самонесущий (588*300*588)</option>
+                                </select>
+                        </div>
+                        <div class="calc3 bl">
+                                    <td>Марка блока</td>
+                                    <br>
+                                    <td>
+                                        <select class="D-block task" name="months">
+                                            <option value="D300">D300</option>
+                                            <option value="D400">D400 </option>
+                                            <option value="D500">D500</option>
+                                            <option value="D600">D600</option>
+        
+                                        </select>
+                                    </td>
+                            </td>
+                        </div> 
+                    </div>
+            
+            
+            
+                    <div class="one-calc">
+                        <div class="size-bloc">
+                            Расположение блока
+                            <br>
+                            <td>Вертикально</td>
+                            <input text="" type="checkbox">
+                            <td>Горизонтально</td>
+                            <input text="" type="checkbox">
+                        </div>
+                    </div>
+            
+                    <div class="one-calc">
+                        <div class="size-bloc">
+                            Запас на обрезки(%)<br>
+            
+                            <div>
+                                <form name="publish">
+                                    <input  class="task" id="a" type="text" ">
+            
+                                      </div>
+                
+                                </div>
+                               </div>                 
+                               
+                       </div>
+            
+            
+                       
+                       
+                       
+                       <div class=" container-size-block">
+                               
+                            </div>
+            
+            
+            
+            
+            
+                          
+                 </div>
+            
+            <!-- 2 Размеры стен-->
+                
+            <div class="container-calc">
+                <div class="parametr-bloc">
+                                    <div class="name-bloc">
+                                        <img src="images/brick.png" alt=""> <span class="brick">ВВЕДИТЕ РАЗМЕР</span>
+                                    </div>
+                
+                
+                    <div class="dom">
+                
+                        <div class="dom-size">1 этаж</div>
+                            <div class="two-calc">                   
+                                <div class="size-parametr">
+                                    Общая длина стен(м)<br>
+                                    <input class="task" id="b"  type="text">
+                                </div>
+                
+                                <div class="size-parametr">
+                                    Высота этажа(м)<br>
+                                    <input class="task" id="c" type="text">
+                                </div>
+                
+                                <div class="size-parametr">
+                                    Подогнать по высоте блока<br>
+                                    <input class="task" id="chek1"  value="0.3" text="" type="checkbox">
+                                </div>
+                            </div>
+                
+                      
+                    </div>  <!-- class="dom" -->
+                </div>  <!--class="parametr-bloc" -->         
+            </div>  <!-- class="container-calc" -->
+        
+            <!-- 3 Укажите размеры Проемов-->
+        
+                <div class="container-calc">
+                    <div class="parametr-bloc">
+                        <div class="name-bloc">
+                            <img src="images/window.png" alt=""> <span class="brick">ВЫБЕРИТЕ РАЗМЕРЫ
+                                    МЕЖКОМНАТНЫХ ДВЕРЕЙ</span>
+                         </div>
+                        <div class="dom">
+                            <div class="two-calc">
+                                <div class="two-calc-input">
+        
+                           
+                                <div class="size-parametr">
+                                    <td>Высота(м)</td><br>
+                                        <input class="task" id="proemH"  type="text">
+                                    </div>
+                                <div class="size-parametr">
+                                    <td>Ширина(м)</td><br>
+                                        <input class="task" id="proemL" type="text">
+                                </div>
+                                <div class="size-parametr">
+                                    <td>Колличество</td><br>
+                                        <input  class="task" id="proemSize" type="text">
+                                </div>
+                                    <div class="size-parametr"><br>
+                                        <div>
+                                            <button onclick="getProem()" type="button">+</button>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                               
+                            <div class="size-parametr">
+                                        <ol id="taskList"> </ol>
+                                </div>
+                        </div>
+                    </div>
+        
+                </div>
+        
+
+        
+     </div>   
+    
+    <div class="calkulator4">
+        
+        
+            <!-- Калькулятор по разделам -->
+            <!-- 1 Параметры блока-->
+            <div class="containerGrid">
+                <div class="grid s">
+                    <img src="images/edit_.png" alt=""> <span class="brick">ВВЕДЕННЫЕ ДАННЫЕ ДЛЯ РАСЧЕТА</span>
+                </div>                
+                <div class="grid "> 
+                    <img src="images/table.png" alt=""> <div onclick="itog1();" id="1itog" class="brickS" style="color: black"> КРАТКИЙ РАСЧЕТ <span class="arrow1">&#9660;</span> </div>
+                 </div>
+                <div class="grid ">
+                    <img src="images/table.png" alt=""> <div onclick="itog2();" id="2itog"class="brickS"> ДЕТАЛЬНЫЙ РАСЧЕТ <span class="arrow2"></span></div>
+                </div>
+            </div>
+            <div class="containerGrid2">
+                <div class="gridSetka"></div>
+
+                <div class="gridSetka">
+                    <img height="40%" src="../Калькулятор/images/1.png" alt=""><span class="">Наружние несущие стены</span>
+                </div>                
+                <div class="gridSetka"> 
+                    <img height="40%"   src="../Калькулятор/images/1.png" alt=""><span  class=""> Внутренние несущие стены</span>
+                 </div>
+                <div class="gridSetka">
+                    <img height="40%"  src="../Калькулятор/images/1.png" alt=""><span class="">Внутренние перегородки</span>  
+                </div>
+                <div class="gridSetka"></div>
+            </div>
+          <div class="oknoItog"></div>
+
+
+
+<!-- //////КРАТКИЙ РАСЧЕТ -->
+<div class="kratItog">
+       
+    <!-- 1 ПАРАМЕТР БЛОКА-->    
+    <div class="containerGrid2">
+        <div class="parametr-bloc">
+            <div class="name-bloc">
+                <img src="images/window.png" alt=""> <span class="brick">ПАРАМЕТР БЛОКА</span>
+             </div>
+
+        </div> 
+    </div>
+        <div class="tablGrid">
+            <div class="tablConteiner">
+                <table class="sizeBlockTabl1 shrift" id="colorTabl"><!-- Размер блока --></table>
+                <table class="sizeBlockTabl2 shrift" ><!-- Марка блока --></table>
+                <table class="sizeBlockTabl3 shrift" id="colorTabl" ><!-- Проценты --> </table>
+                <table> <!-- Расположение блока --></table>
+             </div><img src="images/block2.png" alt="">
+        </div>
+    <!-- 2 РАЗМЕР СТЕН-->    
+
+    <div class="containerGrid2">
+        <div class="parametr-bloc">
+            <div class="name-bloc">
+                <img src="images/house-plan копия 2.png" alt=""> 
+                <span class="brick">РАЗМЕР СТЕН</span>
+            </div>
+        </div> 
+    </div>
+        <div class="tablGrid">
+            <div class="tablConteiner">
+                <table class="oneHouse shrift"  id="colorTabl"><!-- 1 этаж --></table>
+                <table class="twoHouse shrift"> <!-- 2 Этаж --></table>
+                <table class="threeHouse shrift"  id="colorTabl"><!-- 3 этаж --></table>
+            </div><img src="images/планировка.png" alt="">
+        </div>
+       
+    <!-- 3 РАЗМЕР ПРОЕМОВ-->    
+
+        <div class="containerGrid2">
+                <div class="parametr-bloc">
+                    <div class="name-bloc">
+                        <img src="images/window.png" alt=""> <span class="brick">РАЗМЕР ПРОЕМОВ</span>
+                     </div>
+
+                </div> 
+        </div>
+            <div class="tablGrid">
+                <div class="tablConteiner">
+                    <table class="proemHouse shrift"  id="colorTabl"> <td id="noDan"> Нет данных</td>   <!-- проемы --></table>
+                </div><img src="images/проемы.png" alt="">
+            </div>
+    <!-- 3 РАЗМЕР ФРОНТОВ-->    
+
+         <div class="containerGrid2">
+            <div class="parametr-bloc">
+                <div class="name-bloc">
+                    <img src="images/joist.png" alt="">
+                    <span class="brick">РАЗМЕР ФРОНТОВ</span>
+                </div>
+            </div> 
+         </div>
+            <div class="tablGrid">
+                <div class="tablConteiner">
+                    <table class="frontHouse1 shrift" id="colorTabl"><!-- 1 фронт   --></table>
+                    <table class="frontHouse2 shrift"><!-- 2 фронт   --></table>
+                </div><img src="images/фронтон.png" alt="">
+            </div>
+
+    <!-- 4 РАЗМЕР ТРАПЕЦЕВИДНЫХ-->    
+
+         <div class="containerGrid2">
+            <div class="parametr-bloc">
+                <div class="name-bloc">
+                    <img src="images/windows 2.png" alt=""> 
+                    <span class="brick">ТРАПЕЦИВИДНЫЕ ОКНА</span>
+                 </div>
+            </div> 
+         </div>
+            <div class="tablGrid">
+                <div class="tablConteiner">
+                    <table class="trapecOknoHouse shrift" id="colorTabl"><td id="noDan2"> Нет данных</td> <!--1 окно --></table>
+                </div><img src="images/круглые окна.png" alt="">
+            </div>
+    <!-- 5 КЛЕЙ-->    
+
+         <div class="containerGrid2">
+            <div class="parametr-bloc">
+                <div class="name-bloc">
+                    <img src="images/sack.png" alt=""> 
+                    <span class="brick">КЛЕЙ</span>
+                 </div>
+            </div> 
+         </div>
+            <div class="tablGrid">
+                <div class="tablConteiner">
+                    <table  class="colorTabl">
+                        <td id="td1">Учесть в рассчете</td>
+                        <td id="td2"><input class="task"  type="checkbox"></td>
+                        <td id="td2">  <input class="task"  type="checkbox"></td>
+                        <td id="td2">  <input class="task"  type="checkbox"></td>
+                    </table>
+                </div><img src="images/клей 2.png" alt="">
+            </div>
+    <!-- 5 ПЕНА-->    
+
+        <div class="containerGrid2">
+            <div class="parametr-bloc">
+                <div class="name-bloc">
+                    <img src="images/Слой 3 копия 3.png" alt=""> 
+                    <span class="brick">ПЕНА</span>
+                 </div>
+            </div> 
+        </div>
+            <div class="tablGrid">
+                <div class="tablConteiner">
+                    <table  class="colorTabl">
+                        <td id="td1">Учесть в рассчете</td>
+                        <td id="td2"><input class="task"  type="checkbox"></td>
+                        <td id="td2">  <input class="task"  type="checkbox"></td>
+                        <td id="td2">  <input class="task"  type="checkbox"></td>
+                    </table>
+                </div><img height="50%" src="images/пена клей.png" alt="">
+            </div>
+
+    <!-- 5 КЛАДОЧНАЯ СЕТКА-->    
+
+        <div class="containerGrid2">
+            <div class="parametr-bloc">
+                <div class="name-bloc">
+                    <img src="images/grid.png.png" alt=""> 
+                    <span class="brick">КЛАДОЧНАЯ СЕТКА</span>
+                </div>
+            </div> 
+        </div>
+                <div class="tablGrid">
+                    <div class="tablConteiner">
+                        <table  class="colorTabl">
+                            <td id="td1">Учесть в рассчете</td>
+                            <td id="td2"><input class="task"  type="checkbox"></td>
+                            <td id="td2"><input class="task"  type="checkbox"></td>
+                            <td id="td2"><input class="task"  type="checkbox"></td>
+                        </table>
+                    </div><img src="images/сетка.png" alt="">
+                </div>
+</div>
+
+
+
+<!-- //////ДЕТАЛЬНЫЙ РАСЧЕТ -->       
+<div class="detalItog">
+    <!--1 Расчет по блоку -->
+    <div class="containerGrid2">
+        <div class="parametr-bloc">
+            <div class="name-bloc">
+                <div onclick="tablRaschet('block')" style="border-bottom: 0.5px solid grey ;
+                width: 800px;" class="raschetBlockItog1">Расчет по блоку &#x2227;</div>
+                <div onclick="tablRaschet('none')" class="raschetBlockItog2">Расчет по блоку &#x2228;</div>
+            </div>
+                       
+            <div id="RaschetPoBlock" class="tablGrid">
+                <div class="tablConteinerRashet">
+                    
+                    <table class="rezultat4 shrift" ><!-- Размер блока --></table>
+                    <table class="sizeBlockTabl2 shrift" id="colorTabl"><!-- Марка блока --></table>
+                    <table class="sizeBlockTabl3 shrift"  ><!-- Проценты --> </table>
+                    <table class="rezultat shrift" id="colorTabl"><!-- Размер блока --></table>
+                    <table class="rezultat2 shrift" ><!-- Марка блока --></table>
+                    <table class="rezultat3 shrift" id="colorTabl" ><!-- Проценты --> </table>
+                    <table class="rezultat5 shrift" id="colorTabl"><!-- Марка блока --></table>
+                    <table class="rezultat6 shrift"  ><!-- Проценты --> </table>
+                    <table class="rezultat7 shrift" id="colorTabl" ><!-- Проценты --> </table>
+                    <table class="rezultat8 shrift" ><!-- Проценты --> </table>
+                    <table class="rezultat9 shrift" id="colorTabl" ><!-- Проценты --> </table>
+                    <table class="rezultat10 shrift" ><!-- Проценты --> </table>
+                    <table class="rezultat11 shrift" id="colorTabl" ><!-- Проценты --> </table>
+                    <table class="rezultat12 shrift" ><!-- Проценты --> </table>
+                </div>
+                <img  class="tablConteinerRashet" src="images/block2.png" alt="">
+        </div>
+
+                
+
+    
+            
+    </div> 
+</div>
+
+       <!--2 Расчет по Перемычкам -->
+       <div class="containerGrid2">
+        <div class="parametr-bloc">
+            <div class="name-bloc">
+                <div onclick="tablRaschetPerem('block')" class="raschetPeremItog1" style="border-bottom: 0.5px solid grey ;
+                 width: 800px;">Расчет по перемычкам&#x2227;</div>
+                <div onclick="tablRaschetPerem('none')" class="raschetPeremItog2">Расчет по перемычкам &#x2228;</div>
+            </div>
+                       
+            <div id="RaschetPoBlock" class="tablGrid">
+                <div class="tablConteinerRashetPerem">
+                    
+                    <table class="rezultat4 shrift" ><!-- Размер блока --></table>
+                    <table class="sizeBlockTabl2 shrift" id="colorTabl"><!-- Марка блока --></table>
+                    <table class="sizeBlockTabl3 shrift"  ><!-- Проценты --> </table>
+                    <table class="rezultat shrift" id="colorTabl"><!-- Размер блока --></table>
+                    <table class="rezultat2 shrift" ><!-- Марка блока --></table>
+                    <table class="rezultat3 shrift" id="colorTabl" ><!-- Проценты --> </table>
+                    <table class="rezultat5 shrift" id="colorTabl"><!-- Марка блока --></table>
+                    <table class="rezultat6 shrift"  ><!-- Проценты --> </table>
+                    <table class="rezultat7 shrift" id="colorTabl" ><!-- Проценты --> </table>
+                    <table class="rezultat8 shrift" ><!-- Проценты --> </table>
+                    <table class="rezultat9 shrift" id="colorTabl" ><!-- Проценты --> </table>
+                    <table class="rezultat10 shrift" ><!-- Проценты --> </table>
+                    <table class="rezultat11 shrift" id="colorTabl" ><!-- Проценты --> </table>
+                    <table class="rezultat12 shrift" ><!-- Проценты --> </table>
+                </div>
+                <img  class="tablConteinerRashet" src="images/block2.png" alt="">
+        </div>
+
+                
+
+    
+            
+    </div> 
+</div>
+        
+        
+        </div>
+     </div>
+            
+            <!-- 2 Размеры стен-->
+           
+            <!-- 3 Укажите размеры Проемов-->
+        
+         
+        
+
+        
+     </div>
+
+    </div>
+
+
+     <div class="btn-calk">
+    <button type="button" onclick="show('block');prog()">ПОДТВЕРДИТЬ</button>
+        </div>
+    <!-- Модальное окно результата -->
+
+    
+
+
+    </div>      <!-- container -->
+
+</div> 
+
+     <script src="APP.js"></script>
+     <script src="modal.js"></script>
+     <script src="content.js"></script>
+     <script src="calc4.js"></script>
+     <script src="itog.js"></script>
+     <script src="select.js"></script>
+
+    </body>
+</html>
